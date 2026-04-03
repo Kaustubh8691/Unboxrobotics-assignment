@@ -178,6 +178,4 @@ frontend/src/
 
 ---
 
-## License
 
-Sample assignment submission; adapt as needed for your course or employer.

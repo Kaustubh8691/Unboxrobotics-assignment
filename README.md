@@ -179,4 +179,7 @@ frontend/src/
 ---
 <img width="1084" height="618" alt="Screenshot 2026-04-03 145643" src="https://github.com/user-attachments/assets/e09536f6-a87c-4b82-82dd-94bbe0267f00" />
 
+<img width="1898" height="972" alt="image" src="https://github.com/user-attachments/assets/0ec8296c-26d1-4045-a2b5-c94106aea15e" />
+
+
 

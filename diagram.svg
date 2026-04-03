@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <defs>
+    <style>
+      .box { fill: #f8fafc; stroke: #334155; stroke-width: 2; }
+      .title { font-family: system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #0f172a; }
+      .sub { font-family: system-ui, sans-serif; font-size: 11px; fill: #475569; }
+      .lbl { font-family: system-ui, sans-serif; font-size: 11px; fill: #0369a1; font-weight: 600; }
+      .arrow { stroke: #334155; stroke-width: 2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="920" height="420" fill="#ffffff"/>
+  <rect class="box" x="40" y="40" width="200" height="72" rx="8"/>
+  <text class="title" x="140" y="68" text-anchor="middle">Sensor simulator</text>
+  <text class="sub" x="140" y="92" text-anchor="middle">0–120 km/h every 1s</text>
+  <rect class="box" x="300" y="32" width="240" height="88" rx="8"/>
+  <text class="title" x="420" y="60" text-anchor="middle">Node.js backend</text>
+  <text class="sub" x="420" y="82" text-anchor="middle">Express (REST) + Socket.IO</text>
+  <text class="sub" x="420" y="100" text-anchor="middle">Port 3001</text>
+  <rect class="box" x="620" y="40" width="200" height="72" rx="8"/>
+  <text class="title" x="720" y="68" text-anchor="middle">PostgreSQL</text>
+  <text class="sub" x="720" y="92" text-anchor="middle">Table: speed_data</text>
+  <path class="arrow" d="M 240 76 L 298 76"/>
+  <text class="lbl" x="248" y="68">insert</text>
+  <path class="arrow" d="M 540 76 L 618 76"/>
+  <text class="lbl" x="558" y="68">persist</text>
+  <path class="arrow" d="M 420 120 L 420 198"/>
+  <text class="lbl" x="428" y="165">WebSocket: speed_update</text>
+  <rect class="box" x="320" y="200" width="200" height="88" rx="8"/>
+  <text class="title" x="420" y="232" text-anchor="middle">React client</text>
+  <text class="sub" x="420" y="254" text-anchor="middle">Gauge, chart, Axios + Socket.IO</text>
+  <text class="sub" x="420" y="272" text-anchor="middle">UI (Docker: port 8080)</text>
+  <path stroke="#64748b" stroke-width="1.5" stroke-dasharray="7 5" fill="none" marker-end="url(#m)" d="M 380 244 C 120 244 120 120 238 76"/>
+  <text class="lbl" x="95" y="200">HTTP: GET /speed/recent</text>
+</svg>

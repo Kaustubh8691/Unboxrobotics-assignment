@@ -1,0 +1,49 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: speedometer-db
+    environment:
+      POSTGRES_USER: speeduser
+      POSTGRES_PASSWORD: speedpass
+      POSTGRES_DB: speedometer
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U speeduser -d speedometer']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+    container_name: speedometer-api
+    ports:
+      - '3001:3001'
+    environment:
+      PGHOST: postgres
+      PGPORT: 5432
+      PGUSER: speeduser
+      PGPASSWORD: speedpass
+      PGDATABASE: speedometer
+      PORT: 3001
+      CORS_ORIGIN: '*'
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_BACKEND_URL: http://localhost:3001
+    container_name: speedometer-ui
+    ports:
+      - '8080:80'
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

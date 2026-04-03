@@ -177,5 +177,6 @@ frontend/src/
 - Horizontal scaling (Redis adapter for Socket.IO)  
 
 ---
+<img width="1084" height="618" alt="Screenshot 2026-04-03 145643" src="https://github.com/user-attachments/assets/e09536f6-a87c-4b82-82dd-94bbe0267f00" />
 
 
